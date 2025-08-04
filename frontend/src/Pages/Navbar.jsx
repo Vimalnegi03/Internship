@@ -4,7 +4,7 @@ import useAuth from "../../store/store";
 import { use } from "react";
 import { useNavigate } from 'react-router-dom';
 function Navbar() {
-    const {logout}=useAuth();
+    const {logout,user}=useAuth();
     const navigate=useNavigate();
     function handleLogout()
     {
@@ -40,7 +40,7 @@ function Navbar() {
               <button
                 onClick={handleLogout}
               >
-                Logout
+                {user?"Logout":"Login"}
               </button>
             </li>
           </ul>

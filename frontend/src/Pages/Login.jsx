@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { useNavigate } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import useAuth from '../../store/store';
 
 function Login() {
@@ -74,6 +74,9 @@ function Login() {
         <button type="submit" className="btn btn-primary w-full">
           Login
         </button>
+        <p className='mt-2'>
+            Dont have a account:<Link to="/register" className='text-blue-500'>Create Account</Link>
+        </p>
       </form>
     </div>
   );

@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import useAuth from '../../store/store';
-
+import { Link } from 'react-router-dom';
 function Signup() {
   const { signup, user } = useAuth();
   const [data, setData] = useState({
@@ -91,6 +91,9 @@ function Signup() {
         <button type="submit" className="btn btn-primary w-full">
           Sign Up
         </button>
+         <p className='mt-2'>
+            Already have a account:<Link to="/login" className='text-blue-500'>Log In</Link>
+        </p>
       </form>
     </div>
   );
