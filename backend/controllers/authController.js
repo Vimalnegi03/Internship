@@ -50,7 +50,11 @@ export const register=async(req,res)=>{
    })
    newUser.password=""
    const token=jwt.sign({id:newUser._id},process.env.JWT_SECRET,{expiresIn:process.env.JWT_EXPIRY})
-   res.cookie("token",token)
+   res.cookie("token", token, {
+  httpOnly: true,
+  secure: true,
+  sameSite: "None"
+});
    res.status(201).json({message:"User created successfully",data:newUser,success:true})
    } catch (error) {
     console.log(error.message)
@@ -82,7 +86,11 @@ export const login=async(req,res)=>{
         return res.status(400).json({message:"Please provide the correct password"})
      }
     const token=jwt.sign({id:user._id},process.env.JWT_SECRET,{expiresIn:process.env.JWT_EXPIRY})
-     res.cookie("token",token)
+    res.cookie("token", token, {
+  httpOnly: true,
+  secure: true,
+  sameSite: "None"
+});
     return  res.status(201).json({message:"User login successfully",data:user,success:true})
     } catch (error) {
         console.log(error.message)
