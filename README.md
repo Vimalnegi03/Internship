@@ -34,13 +34,11 @@ https://internship-1-l5aa.onrender.com/
 ```
 git clone https://github.com/Vimalnegi03/Internship.git
 cd Internship
-
 ```
 ### 2. Install dependencies
 ```
 cd frontend
 npm install
-
 ```
 ### 3. Backend Setup
 ```
@@ -53,7 +51,6 @@ Create a .env file in your backend with:
 MONGO_URI=your_mongo_connection_string
 JWT_SECRET=your_jwt_secret
 JWT_EXPIRY=7d
-
 ```
 ### 5. Run server & client
 server :
@@ -83,7 +80,13 @@ Internship/
 ├── README.md
 └── ...
 ```
-### ScreenShots -:
+## ScreenShots -:
+### Dashboard-:
+![Dashboard](/Dashboard.png)
+### Leaderboard-:
+![Leaderboard](/Leaderboard.png)
+### Login-:
+![Login](/Login.png)
 
 ### 📞 Contact
 - Author: Vimal Negi
